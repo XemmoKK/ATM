@@ -18,7 +18,7 @@ class ATM:
 
     def option_1(self, user_input = None):
         if user_input == None:
-            return ("""
+            print("""
             BALANCE
             {}
             Type "menu" and press enter to go back to main menu
@@ -31,7 +31,7 @@ class ATM:
 
     def option_2(self, user_input = None):
         if user_input == None:
-            return ("""
+            print("""
             DEPOSIT
             Current Balance: {}
             Error: {}
@@ -45,7 +45,7 @@ class ATM:
 
     def option_3(self, user_input = None):
         if user_input == None:
-            return ("""
+            print("""
             WITHDRAWAL
             Current Balance: 150000.00
             Error: {}
@@ -53,32 +53,17 @@ class ATM:
             >
             """).__repr__().replace("\\n","\n")
         elif user_input == "menu":
-            return self.main_menu()
+            print(self.main_menu())
         else:
-            return self.withdrawal(user_input)
+            print(self.withdrawal(user_input))
 
     def option_4(self, user_input = None):
-        return ("""
+        print("""
         QUIT
         Are you sure you want to quit? (yes/no)
         >
-        """).__repr__().replace("\\n","\n")
-
-    def main_menu(self, option = None):
-        if option is None:            
-            option = input("Please pick an option: ")
-            return ("""
-            1. Balance
-            2. Deposit
-            3. Withdrawal
-            4. Quit
-
-            Enter Menu option
-            > 
-            """).__repr__().replace("\\n","\n")
-        return response_handler(option)
-        
-
+        """).__repr__().replace("\\n","\n")   
+  
     def response_handler(self, option):
         option_submenus = {
             1: self.option_1,
@@ -89,6 +74,20 @@ class ATM:
         if option == 'yes':
             return sys.exit          
         return option_submenus[option]()
+
+    def main_menu(self, option = None):
+        if option is None:          
+            option = input("Please pick an option: ")
+            print("""
+            1. Balance
+            2. Deposit
+            3. Withdrawal
+            4. Quit
+
+            Enter Menu option
+            > 
+            """).__repr__().replace("\\n","\n")
+        return self.response_handler(option)
 
     def charges(self, amount):
         pass
@@ -194,4 +193,4 @@ class ATM:
 
 if __name__ == "__main__":
     inst = ATM()
-    print(inst.option_2())
+    print(inst.main_menu())
