@@ -16,7 +16,7 @@ class ATM:
     def __init__(self):
         self.account = Account()
 
-    def option_1(user_input = None):
+    def option_1(self, user_input = None):
         if user_input == None:
             return ("""
             BALANCE
@@ -27,9 +27,9 @@ class ATM:
         elif user_input == "menu":
             return main_menu()
         else:
-            return balance()
+            return self.balance()
 
-    def option_2(user_input = None):
+    def option_2(self, user_input = None):
         if user_input == None:
             return ("""
             DEPOSIT
@@ -43,7 +43,7 @@ class ATM:
         else:
             return self.deposit(user_input)
 
-    def option_3(user_input = None):
+    def option_3(self, user_input = None):
         if user_input == None:
             return ("""
             WITHDRAWAL
@@ -53,11 +53,11 @@ class ATM:
             >
             """).__repr__().replace("\\n","\n")
         elif user_input == "menu":
-            return main_menu()
+            return self.main_menu()
         else:
-            return withdrawal(user_input)
+            return self.withdrawal(user_input)
 
-    def option_4(user_input = None):
+    def option_4(self, user_input = None):
         return ("""
         QUIT
         Are you sure you want to quit? (yes/no)
