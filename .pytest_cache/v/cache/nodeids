@@ -1,0 +1,8 @@
+[
+  "test_main.py::TestATM::()::test_balance", 
+  "test_main.py::TestATM::()::test_max_transaction_frequency", 
+  "test_main.py::TestATM::()::test_max_transaction_amount", 
+  "test_main.py::TestATM::()::test_suficient_funds", 
+  "test_main.py::TestATM::()::test_deposit", 
+  "test_main.py::TestATM::()::test_withdrawal"
+]

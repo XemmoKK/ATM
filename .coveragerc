@@ -1,0 +1,5 @@
+[run]
+omit = README.md
+
+[tool:pytest]
+addopts = --cov=<ATM> --cov-report html
