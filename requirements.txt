@@ -43,7 +43,7 @@ Pillow==5.3.0
 pluggy==0.6.0
 prompt-toolkit==1.0.15
 psycopg2==2.7.5
-py==1.5.4
+py==1.10.0
 pycparser==2.18
 pyexcel-io==0.5.9.1
 pyexcel-xlsx==0.5.6
