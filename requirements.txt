@@ -59,7 +59,7 @@ python-dateutil==2.7.3
 python-geoip==1.2
 python-geoip-geolite2==2015.303
 pytz==2018.5
-reportlab==3.5.9
+reportlab==3.5.55
 requests==2.19.1
 scandir==1.7
 simplegeneric==0.8.1
